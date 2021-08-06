@@ -27,7 +27,8 @@
     position: absolute;
     z-index: 1;
     right: 45%;
-    top: -20%;
+    top: 0;
+    transform: translateY(-25%);
     
 }
 .aboutus__content__parallax-1__scene {
@@ -41,7 +42,8 @@
     position: absolute;
     z-index: 3;
     right: 45%;
-    top: -20%;
+    top: 0;
+    transform: translateY(-25%);
 }
 .aboutus__content__parallax-2__scene {
     width: 100%;
@@ -95,3 +97,25 @@
     background-position: center;
     background-size: contain;
 }
+
+
+
+// ============================================================ //
+// ========================== MEDIA ========================== //
+// ============================================================ //
+
+
+@media screen and (max-width: 700px) {
+    .aboutus__content {
+        grid-template-columns: 1fr;
+        .sec__title {
+            text-align: center;
+        }
+    }
+    
+}
+
+
+// ============================================================ //
+// ========================== END MEDIA ======================= //
+// ============================================================ //
