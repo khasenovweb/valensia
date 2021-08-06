@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{{ title }}</title>
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/datepicker.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="global__wrapper">
+		<!-- ================================================== -->
+		<!-- ===================== header ===================== -->
+		<!-- ================================================== -->
+		<section class="header">
+			<div class="container">
+				<div class="header__content">
+					<a href="/" class="header__logo">
+						<img src="img/logo.png" alt="">
+					</a>
+					<div class="header__loc">
+						<div class="header__loc__icon" style="background-image: url(img/loc.svg);"></div>
+						<div class="header__loc__text">
+							<div class="header__loc__title">ул.Карбышева, 70</div>
+							<div class="header__loc__desc">от 10 до 90 чел.</div>
+							<a href="" class="header__loc__link">посмотреть зал</a>
+						</div>
+					</div>
+					<div class="header__loc">
+						<div class="header__loc__icon" style="background-image: url(img/loc.svg);"></div>
+						<div class="header__loc__text">
+							<div class="header__loc__title">ул.Адоратского, 39д</div>
+							<div class="header__loc__desc">от 10 до 180 чел.</div>
+							<a href="" class="header__loc__link">посмотреть зал</a>
+						</div>
+					</div>
+					<div class="header__loc">
+						<div class="header__loc__icon" style="background-image: url(img/loc.svg);"></div>
+						<div class="header__loc__text">
+							<div class="header__loc__title">ул.Габишева, 38</div>
+							<div class="header__loc__desc">от 10 до 200 чел.</div>
+							<a href="" class="header__loc__link">посмотреть зал</a>
+						</div>
+					</div>
+					<div class="header__phones">
+						<div class="header__phones__label">Телефоны:</div>
+						<a href="" class="header__phones__phone big">+7 (843) 246-48-28</a>
+						<a href="" class="header__phones__phone">+7 (917) 882-88-28</a>
+					</div>
+					<div class="header__btn">
+						<button class="btn">Написать нам WhatsApp</button>
+					</div>
+					<div class="header__hamburger"></div>
+				</div>
+			</div>
+		</section>
+		<!-- ================================================== -->
+		<!-- ===================== END header ===================== -->
+		<!-- ================================================== -->
+
+
+		<!-- ================================================== -->
+		<!-- ===================== navbar ===================== -->
+		<!-- ================================================== -->
+		<section class="navbar">
+			<div class="container">
+				<div class="navbar__content">
+					<ul class="navbar__links">
+						<li>
+							<a href="/">Главная</a>
+						</li>
+						<li>
+							<a href="/">О нас</a>
+						</li>
+						<li>
+							<a href="/">Меропрития</a>
+						</li>
+						<li>
+							<a href="/">Наши залы</a>
+						</li>
+						<li>
+							<a href="/">Меню</a>
+						</li>
+						<li>
+							<a href="/">Контакты</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<!-- ================================================== -->
+		<!-- ===================== navbar ===================== -->
+		<!-- ================================================== -->
+		
+		{% block content %}
+			
+		{% endblock %}
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.fancybox.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/parallax.min.js"></script>
+		<script src="js/datepicker.min.js"></script>
+		<script src="js/mask.js"></script>
+		<script src="js/validate.js"></script>
+		
+		
+		<script src="js/main.js"></script>
+
+
+		<script>
+			$.validator.addMethod(
+				"phone",
+				function (value) {
+					return value.replace(/\D+/g, "").length >= 11;
+				},
+				"Введите номер телефона полностью"
+			);
+
+			$("form[data-form-validate]").each(function (i, el) {
+				$(el).validate({
+				rules: {
+					phone: "phone",
+					date: "required",
+					politics: "required"
+				},
+				messages: {
+					date: "Выберите дату"
+				},
+				submitHandler: function(form) {
+					var data = $(form).serialize();
+					console.log('Валидно');
+						// $.ajax({
+						//     url: '/mail/send-mail-modal.php',
+						//     type: 'post',
+						//     data: data,
+						//     success: function() {
+						//         show_modal_success(form); //Показываем модальное окно после успешной отправки формы
+						//     }
+						// });
+					}
+			});
+		});
+		</script>
+	</div>
+</body>
+</html>

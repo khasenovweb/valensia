@@ -1,0 +1,133 @@
+.header {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(196, 196, 196, 0.1);
+}
+.header__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.header__logo img {
+  height: 5.6rem;
+  width: auto;
+}
+.header__loc__icon {
+  width: 1.6rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 1rem;
+  margin-top: 0.3rem;
+}
+.header__loc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+}
+.header__loc__title {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #363636;
+}
+.header__loc__desc {
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #363636;
+  margin-top: 0.3rem;
+}
+.header__loc__link {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  display: inline-block;
+}
+.header__phones {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+}
+.header__phones__label {
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: #D6AF6D;
+}
+.header__phones__phone {
+  font-weight: 600;
+  color: #363636;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+.header__phones__phone.big {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.header__hamburger {
+  height: 3.5rem;
+  width: 3.6rem;
+  background: radial-gradient(47.41% 82.95% at 51.46% -4.55%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 0.01%, rgba(255, 255, 255, 0) 100%), #39B100;
+  border-radius: 100%;
+  position: relative;
+  overflow: hidden;
+  display: none;
+}
+.header__hamburger:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(../img/hamburger.svg);
+}
+@media screen and (max-width: 1100px) {
+  .header__btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .header__loc {
+    display: none;
+  }
+  .header__hamburger {
+    display: block;
+  }
+}
+@media screen and (max-width: 450px) {
+  .header__phones__label {
+    display: none;
+  }
+  .header__phones__phone {
+    display: none;
+    margin-top: 0;
+  }
+  .header__phones__phone.big {
+    display: block;
+  }
+  .header__logo img {
+    height: 3rem;
+  }
+}
+@media screen and (max-width: 330px) {
+  .header__phones__phone.big {
+    display: none;
+  }
+}
