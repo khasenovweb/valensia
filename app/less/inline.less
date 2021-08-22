@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+@import "partials/_vars.less";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: @gold;
+}
+input[type="text"] {
+    padding: 2rem 2.5rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #f5f5f5;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: @black;
+    &::placeholder {
+        color: #c4c4c4;
+    }
+}
+.global__wrapper {
+    overflow-x: hidden;
+}
+.container {
+    max-width: 131rem;
+    padding: 0 3rem;
+    margin: 0 auto;
+}
+
+.btn {
+    color: white;
+    background: radial-gradient(
+            47.41% 82.95% at 51.46% -4.55%,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 0.4) 0.01%,
+            rgba(255, 255, 255, 0) 100%
+        ),
+        #39b100;
+    box-shadow: 0 2px 0 0 #39a904;
+    border-radius: 10px;
+    border: 0;
+    padding: 1.4rem 2rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 1.3rem;
+    display: inline-block;
+    text-align: center;
+    &.white {
+        background-color: #fff;
+        color: @green;
+        box-shadow: 0 2px 0 0 #d1d1d1;
+    }
+    &.red {
+        background: radial-gradient(
+                47.41% 82.95% at 51.46% -4.55%,
+                rgba(255, 255, 255, 0.4) 0%,
+                rgba(255, 255, 255, 0.4) 0.01%,
+                rgba(255, 255, 255, 0) 100%
+            ),
+            #dd554c;
+        box-shadow: 0 2px 0 0 #c73232;
+    }
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0.2rem;
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.2) 10%,
+            #55c62100 100%
+        );
+    }
+    &:active {
+        box-shadow: none;
+        transform: translateY(0.2rem);
+    }
+}
+
+.checkbox {
+    cursor: pointer;
+    input {
+        display: none;
+        &:checked + .checkbox__box {
+            .checkbox__box__circle {
+                transform: translateX(1rem);
+                background-color: @green;
+            }
+        }
+    }
+}
+.checkbox__box {
+    width: 2.2rem;
+    height: 1.2rem;
+    background: #f5f5f5;
+    border-radius: 10rem;
+    padding: 0.2rem;
+}
+
+.checkbox__box__circle {
+    width: 0.8rem;
+    min-width: 0.8rem;
+    height: 0.8rem;
+    background: #c4c4c4;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+label.error {
+    // margin-top: 1rem;
+    font-size: 1rem;
+    display: block;
+    color: #d0141e;
+    padding: 1rem 2.5rem;
+    // background-color: #F5F5F5;
+    border-radius: 1rem;
+    display: none !important;
+}
+input.error {
+    background-color: lighten(#d0141e, 52%);
+}
+.sec {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    &.white {
+        background-color: #fff;
+    }
+}
+.sec__cloud {
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    background-color: #f6f6f6;
+}
+.sec__title {
+    font-family: Noto Serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4rem;
+    color: @black;
+    * {
+        font-family: Noto Serif;
+        font-style: normal;
+        font-weight: 500;
+    }
+    .gold {
+        color: #d6af6d;
+    }
+    &.center {
+        text-align: center;
+    }
+}
+
+.sec__desc {
+    font-weight: normal;
+    font-size: 1.8rem;
+    color: @black;
+    line-height: 1.6;
+    margin-top: 2rem;
+    &.center {
+        text-align: center;
+    }
+}
+
+.goldbg {
+    background-color: #f6f6f6;
+}
+.cloud__top {
+    position: relative;
+    padding-top: 20rem;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -3px;
+        width: 720rem;
+        height: 21.1rem;
+        background-repeat: repeat-x;
+        background-position: center;
+        background-size: contain;
+        background-image: url(../img/cloud__top.png);
+    }
+}
+.cloud__bottom {
+    position: relative;
+    padding-bottom: 20rem;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -3px;
+        width: 720rem;
+        height: 21.1rem;
+        background-repeat: repeat-x;
+        background-position: center;
+        background-size: contain;
+        background-image: url(../img/cloud__bottom.png);
+    }
+}
+.cloud__bottom-gold {
+    position: relative;
+    padding-bottom: 20rem;
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -3px;
+        width: 720rem;
+        height: 21.1rem;
+        background-repeat: repeat-x;
+        background-position: center;
+        background-size: contain;
+        background-image: url(../img/cloud__bottom-gold.png);
+    }
+}
+.parallax {
+    position: absolute;
+}
+.parallax__scene {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+// ============================================================ //
+// ========================== MEDIA ========================== //
+// ============================================================ //
+@media screen and (max-width: 900px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .cloud__top {
+        padding-top: 10rem;
+        &:before {
+            width: 259.3rem;
+            height: 7.6rem;
+        }
+    }
+    .cloud__bottom {
+        padding-bottom: 10rem;
+        &:after {
+            width: 259.3rem;
+            height: 7.6rem;
+        }
+    }
+    html {
+        font-size: 10px;
+    }
+    .container {
+        padding: 0 2rem;
+    }
+    .sec__title {
+        font-size: 2.4rem;
+    }
+    .cloud {
+        width: 258.7rem;
+        height: 15.2rem;
+        &.top {
+            top: -7rem;
+        }
+        &.bottom {
+            bottom: -7rem;
+        }
+    }
+    .sec__cloud {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sec__desc {
+        font-size: 1.2rem;
+    }
+}
+// ============================================================ //
+// ========================== END MEDIA ======================= //

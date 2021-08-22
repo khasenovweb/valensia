@@ -1,0 +1,42 @@
+@import "_vars.less";
+
+.navbar {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar__content {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar__links {
+    display: flex;
+    align-items: center;
+    a {
+        padding: 1.6rem 4rem;
+        font-weight: normal;
+        font-size: 1.4rem;
+        color: @black;
+        display: inline-block;
+    }
+}
+
+// ============================================================ //
+// ========================== MEDIA ========================== //
+// ============================================================ //
+@media screen and (max-width: 1000px) {
+    .navbar__links a {
+        padding: 1.6rem 3rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        display: none;
+    }
+}
+
+// ============================================================ //
+// ========================== END MEDIA ======================= //
+// ============================================================ //

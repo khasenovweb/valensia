@@ -1,0 +1,746 @@
+{% set title = 'Главная' %}
+
+{% extends 'layouts/_main.html' %}
+
+{% block content %}
+
+
+<!-- ================================================== -->
+<!-- ===================== hero ===================== -->
+<!-- ================================================== -->
+<section class="hero cloud__bottom" style="background-image: url(img/hero-2.jpeg);">
+    <div class="hero__overlay solid"></div>
+    <div class="hero__overlay linear"></div>
+    <div class="hero__overlay radial"></div>
+    <div class="container">
+        <div class="hero__content">
+            <ul class="hero__bredcrumbs">
+                <li><a href="/">Главная</a></li>
+                <img class="hero__bredcrumbs__separator" src="img/bredcrumbs.svg" alt="">
+                <li>Банкетный зал на Карбышева</li>
+            </ul>
+            <h1 class="hero__title">
+                Банкетный зал на<br>
+                <span class="hero__title__gold">Карбышева</span>
+            </h1>
+            <p class="hero__desc">Многим кажется, что проведение банкетов – это сложное и времязатратное дело. 
+                Спешим развеять миф! Заказав торжество у нас, вы поймете, 
+                что праздники – это не головная боль, а радость.</p>
+            <div class="hero__form">
+                <form data-form-validate>
+                    <div class="hero__form__inputwraper">
+                        <input name="date" type="text" placeholder="Дата" data-datepicker  data-mask="date">
+                    </div>
+                    <div class="hero__form__inputwraper">
+                        <input name="phone" type="text" placeholder="Введите телефон" data-mask="phone">
+                    </div>
+                    <div class="hero__form__inputwraper">
+                        <input type="text" placeholder="Введите имя">
+                    </div>
+                    <div class="hero__form__btnwrapper">
+                        <button class="btn">Уточнить дату</button>
+                    </div>
+                    <div class="hero__form__politics">
+                        <label for="checkbox-1" class="checkbox">
+                            <input name="politics" id="checkbox-1" type="checkbox" checked>
+                            <div class="checkbox__box">
+                                <div class="checkbox__box__circle"></div>
+                            </div>
+                        </label>
+                        <div class="hero__form__politics__title">Оставляя заявку Вы соглашаетесь с <a href="">политикой конфинденциальности</a></div>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ===================== END hero =================== -->
+<!-- ================================================== -->
+
+
+<!-- ================================================== -->
+<!-- ===================== aboutbanket =================== -->
+<!-- ================================================== -->
+<section class="aboutus sec white">
+    <!-- <div class="cloud top"></div>
+    <div class="cloud bottom"></div> -->
+    <div class="container">
+        <div class="aboutus__content">
+            <div class="aboutus__img">
+                <div class="aboutus__content__parallax-1">
+                    <div class="aboutus__content__parallax-1__scene" data-paralax-scene>
+                        <img src="img/aboutus__content__parallax-1__img-2.png" alt="" data-depth="1"> 
+                    </div>
+                </div>
+                <div class="aboutus__content__parallax-2">
+                    <div class="aboutus__content__parallax-2__scene" data-paralax-scene>
+                        <!-- <img src="img/aboutus__content__parallax-2__img-2.png" alt="" data-depth="1"> -->
+                        <img src="img/aboutus__content__parallax-1__img-1.png" alt="" data-depth="0.5">   
+                    </div>
+                </div>
+                <img class="aboutus__img__img" src="img/aboutus.png" alt="">
+            </div>
+            <div class="aboutus__text">
+                <h2 class="sec__title">О банкетном зале</h2>
+                <div class="aboutus__opisanie">
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum</p>
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. </p>
+                </div>
+                <div class="aboutus__social">
+                    <div class="aboutus__social__title">Мы в Социальных сетях</div>
+                    <div class="aboutus__social__items">
+                        <a href="" class="aboutus__social__item" style="background-image: url(img/vk.svg);"></a>
+                        <a href="" class="aboutus__social__item" style="background-image: url(img/fb.svg);"></a>
+                        <a href="" class="aboutus__social__item" style="background-image: url(img/yt.svg);"></a>
+                        <a href="" class="aboutus__social__item" style="background-image: url(img/ig.svg);"></a>
+                        <a href="" class="aboutus__social__item" style="background-image: url(img/tt.svg);"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ===================== END aboutbanket =================== -->
+<!-- ================================================== -->
+
+
+
+<!-- ================================================== -->
+<!-- ===================== interior =================== -->
+<!-- ================================================== -->
+<section class="interior sec goldbg cloud__top">
+    <div class="parallax">
+        <div class="parallax__scene" data-paralax-scene>
+            <img src="img/preims__parralax-1__img-1.png" alt="" class="parallax__img" data-depth="0.5">
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="sec__title center">Интерьер</h2>
+        <div class="interior__content">
+            <div class="parallax">
+                <div class="parallax__scene" data-paralax-scene>
+                    <img src="img/interior__parallax-2.png" alt="" class="parallax__img" data-depth="0.5">
+                </div>
+            </div>
+            <div class="parallax">
+                <div class="parallax__scene" data-paralax-scene>
+                    <img src="img/interior__parallax-3.png" alt="" class="parallax__img" data-depth="1">
+                </div>
+            </div>
+            
+            <div class="interior__items">
+                <!-- interior__item -->
+                <a data-src="img/interior-1.jpeg" data-fancybox="interior" class="interior__item">
+                    <div class="interior__item__img" style="background-image: url(img/interior-1.jpeg);"></div>
+                    <div class="interior__item__overlay">
+                        <img class="interior__item__zoom" src="img/interior__zoom.svg" alt="">
+                    </div>
+                </a>
+                <!-- END interior__item -->
+                <!-- interior__item -->
+                <a data-src="img/interior-2.jpeg" data-fancybox="interior" class="interior__item">
+                    <div class="interior__item__img" style="background-image: url(img/interior-2.jpeg);"></div>
+                    <div class="interior__item__overlay">
+                        <img class="interior__item__zoom" src="img/interior__zoom.svg" alt="">
+                    </div>
+                </a>
+                <!-- END interior__item -->
+                <!-- interior__item -->
+                <a data-src="img/interior-3.jpeg" data-fancybox="interior" class="interior__item">
+                    <div class="interior__item__img" style="background-image: url(img/interior-3.jpeg);"></div>
+                    <div class="interior__item__overlay">
+                        <img class="interior__item__zoom" src="img/interior__zoom.svg" alt="">
+                    </div>
+                </a>
+                <!-- END interior__item -->
+                <!-- interior__item -->
+                <a data-src="img/interior-1.jpeg" data-fancybox="interior" class="interior__item">
+                    <div class="interior__item__img" style="background-image: url(img/interior-1.jpeg);"></div>
+                    <div class="interior__item__overlay">
+                        <img class="interior__item__zoom" src="img/interior__zoom.svg" alt="">
+                    </div>
+                </a>
+                <!-- END interior__item -->
+                <!-- interior__item -->
+                <a data-src="img/interior-1.jpeg" data-fancybox="interior" class="interior__item">
+                    <div class="interior__item__img" style="background-image: url(img/interior-1.jpeg);"></div>
+                    <div class="interior__item__overlay">
+                        <img class="interior__item__zoom" src="img/interior__zoom.svg" alt="">
+                    </div>
+                </a>
+                <!-- END interior__item -->
+                <!-- interior__item -->
+                <a data-src="img/interior-2.jpeg" data-fancybox="interior" class="interior__item">
+                    <div class="interior__item__img" style="background-image: url(img/interior-2.jpeg);"></div>
+                    <div class="interior__item__overlay">
+                        <img class="interior__item__zoom" src="img/interior__zoom.svg" alt="">
+                    </div>
+                </a>
+                <!-- END interior__item -->
+                <!-- interior__item -->
+                <a data-src="img/interior-3.jpeg" data-fancybox="interior" class="interior__item">
+                    <div class="interior__item__img" style="background-image: url(img/interior-3.jpeg);"></div>
+                    <div class="interior__item__overlay">
+                        <img class="interior__item__zoom" src="img/interior__zoom.svg" alt="">
+                    </div>
+                </a>
+                <!-- END interior__item -->
+                <!-- interior__item -->
+                <a data-src="img/interior-1.jpeg" data-fancybox="interior" class="interior__item">
+                    <div class="interior__item__img" style="background-image: url(img/interior-1.jpeg);"></div>
+                    <div class="interior__item__overlay">
+                        <img class="interior__item__zoom" src="img/interior__zoom.svg" alt="">
+                    </div>
+                </a>
+                <!-- END interior__item -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ===================== END interior =============== -->
+<!-- ================================================== -->
+
+
+
+<!-- ================================================== -->
+<!-- ===================== peculiarities =============== -->
+<!-- ================================================== -->
+<section class="peculiarities sec goldbg cloud__bottom">
+    <div class="container">
+        <div class="peculiarities__content ">
+            <h2 class="sec__title center"><span class="gold">Особенности</span> банкетного зала</h2>
+            <div class="peculiarities__items">
+                <!-- peculiarities__item -->
+                <div class="peculiarities__item">
+                    <div class="peculiarities__item__icon" style="background-image: url(img/peculiarities-1.png);"></div>
+                    <div class="peculiarities__item__title">Отдельно стоящее здани</div>
+                </div>
+                <!-- END peculiarities__item -->
+                <!-- peculiarities__item -->
+                <div class="peculiarities__item">
+                    <div class="peculiarities__item__icon" style="background-image: url(img/peculiarities-2.png);"></div>
+                    <div class="peculiarities__item__title">Отдельный вход</div>
+                </div>
+                <!-- END peculiarities__item -->
+                <!-- peculiarities__item -->
+                <div class="peculiarities__item">
+                    <div class="peculiarities__item__icon" style="background-image: url(img/peculiarities-3.png);"></div>
+                    <div class="peculiarities__item__title">Есть кондиционеры</div>
+                </div>
+                <!-- END peculiarities__item -->
+                <!-- peculiarities__item -->
+                <div class="peculiarities__item">
+                    <div class="peculiarities__item__icon" style="background-image: url(img/peculiarities-4.png);"></div>
+                    <div class="peculiarities__item__title">Соблюдение санитарной обработки</div>
+                </div>
+                <!-- END peculiarities__item -->
+                <!-- peculiarities__item -->
+                <div class="peculiarities__item">
+                    <div class="peculiarities__item__icon" style="background-image: url(img/peculiarities-5.png);"></div>
+                    <div class="peculiarities__item__title">Отсутсвие пробкового сбора</div>
+                </div>
+                <!-- END peculiarities__item -->
+                <!-- peculiarities__item -->
+                <div class="peculiarities__item">
+                    <div class="peculiarities__item__icon" style="background-image: url(img/peculiarities-6.png);"></div>
+                    <div class="peculiarities__item__title">Собственная парковка</div>
+                </div>
+                <!-- END peculiarities__item -->
+                <!-- peculiarities__item -->
+                <div class="peculiarities__item">
+                    <div class="peculiarities__item__icon" style="background-image: url(img/peculiarities-7.png);"></div>
+                    <div class="peculiarities__item__title">Панорамные окна</div>
+                </div>
+                <!-- END peculiarities__item -->
+                <!-- peculiarities__item -->
+                <div class="peculiarities__item">
+                    <div class="peculiarities__item__icon" style="background-image: url(img/peculiarities-8.png);"></div>
+                    <div class="peculiarities__item__title">Собственный лифт</div>
+                </div>
+                <!-- END peculiarities__item -->
+                <!-- peculiarities__item -->
+                <div class="peculiarities__item">
+                    <div class="peculiarities__item__icon" style="background-image: url(img/peculiarities-9.png);"></div>
+                    <div class="peculiarities__item__title">Зонна отдыха</div>
+                </div>
+                <!-- END peculiarities__item -->
+                <!-- peculiarities__item -->
+                <div class="peculiarities__item">
+                    <div class="peculiarities__item__icon" style="background-image: url(img/peculiarities-10.png);"></div>
+                    <div class="peculiarities__item__title">Выход на террасу</div>
+                </div>
+                <!-- END peculiarities__item -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ===================== END peculiarities =============== -->
+<!-- ================================================== -->
+
+
+
+<!-- ================================================== -->
+<!-- ===================== 3dtour =============== -->
+<!-- ================================================== -->
+<section class="3dtour sec white">
+    <div class="container">
+        <div class="3dtour__content">
+            <h2 class="sec__title center"><span class="gold">3D -</span> тур</h2>
+            <!-- Место для 3d тура -->
+        </div>
+    </div>
+</section>
+<!-- ================================================= -->
+<!-- ===================== END 3dtour =============== -->
+<!-- ================================================== -->
+
+<!-- ================================================= -->
+<!-- ===================== stock =============== -->
+<!-- ================================================== -->
+<section class="stock sec goldbg cloud__top cloud__bottom">
+    <div class="parallax">
+        <div class="parallax__scene" data-paralax-scene>
+            <img src="img/stock__parallax-1.png" alt="" class="parallax__img" data-depth="0.5">
+            <img src="img/stock__parallax-2.png" alt="" class="parallax__img" data-depth="1">
+        </div>
+    </div>
+    <div class="parallax">
+        <div class="parallax__scene" data-paralax-scene>
+            <img src="img/stock__parallax-3.png" alt="" class="parallax__img" data-depth="0.5">
+        </div>
+    </div>
+    <div class="container">
+        <div class="stock__content">
+            <h2 class="sec__title center"><span class="gold">Акция</span> этого месяца</h2>
+            <div class="stock__panel">
+                <div class="stock__panel__text">
+                    <div class="stock__panel__title">Минимальный депозит снижен до 50.000 руб.</div>
+                    <div class="stock__panel__desc">
+                        При заказе банкета в самые ходовые банкетные дни недели – пятница и суббота,   * депозит – минимальная сумма заказа по меню
+                    </div>
+                    <img src="img/stock__panel.png" alt="" class="stock__panel__img__mobile">
+                    <div class="stock__panel__text__bottom">
+                        <button class="btn white">Заказать обратный звонок</button>
+                        <div class="stock__panel__countdown">
+                            <div class="stock__panel__countdown__label">До начала акции:</div>
+                            <div class="stock__panel__countdown__items">
+                                <div class="stock__panel__countdown__item">
+                                    <div class="stock__panel__countdown__item__value">00</div>
+                                    <div class="stock__panel__countdown__item__name">д</div>
+                                </div>
+                                <div class="stock__panel__countdown__item">
+                                    <div class="stock__panel__countdown__item__value">00</div>
+                                    <div class="stock__panel__countdown__item__name">ч</div>
+                                </div>
+                                <div class="stock__panel__countdown__item">
+                                    <div class="stock__panel__countdown__item__value">00</div>
+                                    <div class="stock__panel__countdown__item__name">мин</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stock__panel__img">
+                    <img src="img/stock__panel.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================= -->
+<!-- ===================== END stock =============== -->
+<!-- ================================================== -->
+
+
+
+<!-- ================================================== -->
+<!-- ===================== events =================== -->
+<!-- ================================================== -->
+<section class="events sec white">
+    <div class="parallax">
+        <div class="parallax__scene" data-paralax-scene>
+            <img src="img/events__parallax-1.png" alt="" class="parallax__img" data-depth="0.5">
+        </div>
+    </div>
+    <div class="parallax">
+        <div class="parallax__scene" data-paralax-scene>
+            <img src="img/events-2.png" alt="" class="parallax__img" data-depth="1">
+            <img src="img/events-3.png" alt="" class="parallax__img" data-depth="0.5">
+        </div>
+    </div>
+    <div class="container">
+        <div class="events__content">
+            <h2 class="sec__title center"><span class="gold">Мероприятия</span> которые мы проводим</h2>
+            <p class="sec__desc center">Многим кажется, что проведение банкетов – это сложное и времязатратное дело. Спешим развеять миф! Заказав торжество у нас, вы поймете, что праздники – это не головная боль, а радость.</p>
+            <div class="events__items">
+                <div class="events__item" style="background-image: url(img/events-1.JPEG);">
+                    <div class="events__item__title__wrapper">
+                        <div class="events__item__title">Свадьбы</div>
+                    </div>
+                </div>
+                <div class="events__item" style="background-image: url(img/events-2.jpg);">
+                    <div class="events__item__title__wrapper">
+                        <div class="events__item__title">Юбилеи</div>
+                    </div>
+                </div>
+                <div class="events__item" style="background-image: url(img/events-3.jpg);">
+                    <div class="events__item__title__wrapper">
+                        <div class="events__item__title">Выпускные вечера</div>
+                    </div>
+                </div>
+                <div class="events__item" style="background-image: url(img/events-4.jpg);">
+                    <div class="events__item__title__wrapper">
+                        <div class="events__item__title">Никахи</div>
+                    </div>
+                </div>
+                <div class="events__item" style="background-image: url(img/events-5.jpg);">
+                    <div class="events__item__title__wrapper">
+                        <div class="events__item__title">Корпоративы</div>
+                    </div>
+                </div>
+                <div class="events__item" style="background-image: url(img/events-6.jpg);">
+                    <div class="events__item__title__wrapper">
+                        <div class="events__item__title">Детские выпускные</div>
+                    </div>
+                </div>
+                <div class="events__item" style="background-image: url(img/events-7.jpg);">
+                    <div class="events__item__title__wrapper">
+                        <div class="events__item__title">Выездная регистрация брака</div>
+                    </div>
+                </div>
+                <div class="events__item" style="background-image: url(img/events-8.jpg);">
+                    <div class="events__item__title__wrapper">
+                        <div class="events__item__title">Новогодние корпортаивы</div>
+                    </div>
+                </div>
+                <div class="events__item" style="background-image: url(img/events-9.jpg);">
+                    <div class="events__item__title__wrapper">
+                        <div class="events__item__title">Детские праздники</div>
+                    </div>
+                </div>
+                <div class="events__item" style="background-image: url(img/events-10.jpg);">
+                    <div class="events__item__title__wrapper">
+                        <div class="events__item__title">Кейтиринг</div>
+                    </div>
+                </div>
+                <div class="events__item" style="background-image: url(img/events-11.jpg);">
+                    <div class="events__item__title__wrapper">
+                        <div class="events__item__title">Конференц услуги</div>
+                    </div>
+                </div>
+                <div class="events__item" style="background-image: url(img/events-12.jpg);">
+                    <div class="events__item__title__wrapper">
+                        <div class="events__item__title">Организация мероприятий от Адо Я</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ===================== END events =================== -->
+<!-- ================================================== -->
+
+
+
+<!-- ================================================== -->
+<!-- ===================== personalmanager =================== -->
+<!-- ================================================== -->
+<section class="personalmanager sec goldbg cloud__top cloud__bottom">
+    <div class="container">
+        <h2 class="sec__title center">Ваш персональный <span class="gold">менеджер</span></h2>
+        <div class="personalmanager__content">
+            <div class="personalmanager__content__img">
+                <img src="img/personalmanager.png" alt="">
+            </div>
+            <div class="personalmanager__content__text">
+                <div class="personalmanager__content__text__fio">Иван Петров</div>
+                <div class="personalmanager__content__text__opisanie">
+                    Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный <br> <br>
+печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum
+                </div>
+                <div class="personalmanager__content__text__btns">
+                    <a href="" class="btn">Написать нам WhatsApp</a>
+                    <a href="" class="btn red">Позвонить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ===================== END personalmanager =================== -->
+<!-- ================================================== -->
+
+
+
+<!-- ================================================== -->
+<!-- ===================== clients =================== -->
+<!-- ================================================== -->
+<section class="clients sec white">
+    <div class="container">
+        <div class="clients__content">
+            <h2 class="sec__title center">Компании которые <span class="gold">нам доверяют</span></h2>
+            <div class="clients__items">
+                <img class="clients__item" src="img/clients-1.png" alt="">
+                <img class="clients__item" src="img/clients-2.png" alt="">
+                <img class="clients__item" src="img/clients-3.png" alt="">
+                <img class="clients__item" src="img/clients-4.png" alt="">
+                <img class="clients__item" src="img/clients-5.png" alt="">
+                <img class="clients__item" src="img/clients-6.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ===================== END clients =================== -->
+<!-- ================================================== -->
+
+
+
+<!-- ================================================== -->
+<!-- ===================== reviews =================== -->
+<!-- ================================================== -->
+<section class="reviews sec goldbg cloud__top cloud__bottom">
+    <div class="parallax">
+        <div class="parallax__scene" data-paralax-scene>
+            <img src="img/events__parallax-1.png" alt="" class="parallax__img" data-depth="0.5">
+        </div>
+    </div>
+    <div class="parallax">
+        <div class="parallax__scene" data-paralax-scene>
+            <img src="img/events-2.png" alt="" class="parallax__img" data-depth="1">
+            <img src="img/events-3.png" alt="" class="parallax__img" data-depth="0.5">
+        </div>
+    </div>
+    <div class="container">
+        <div class="reviews__content">
+            <h2 class="sec__title center">Отзывы наших <span class="gold">гостей</span></h2>
+            <div class="reviews__slider owl-carousel">
+                <!-- reviews__slider__item -->
+                <div class="reviews__slider__item">
+                    <div class="reviews__slider__item__img" style="background-image: url(img/reviews.jpeg);"></div>
+                    <div class="reviews__slider__item__text">
+                        <div class="reviews__slider__item__peopledata">
+                            <div class="reviews__slider__item__peopledata__avatar" style="background-image: url(img/reviews.jpeg);"></div>
+                            <div class="reviews__slider__item__peopledata__text">
+                                <div class="reviews__slider__item__peopledata__name">Екатерина Герасимова</div>
+                                <div class="reviews__slider__item__peopledata__date">08.06.2019</div>
+                            </div>
+                        </div>
+                        <div class="reviews__slider__item__text__otziv">
+                            Отмечали 31 мая юбилей папе. Все очень понравилось. Зал большой и очень уютный. <br><br>
+                            Угощение все свежее и очень вкусное за это спасибо повару. И ещё нам преподнесли в подарок каждому приглашенному шашлычки  из куриной грудки, которые таяли во рту. <br><br> 
+                            Девочки официантки справлялись со своими обязанностями отлично. И отдельное спасибо администраторам Ильнур и Альберту. 
+                            Спасибо большое. Все было на высшем уровне.
+                        </div>
+                    </div>
+                </div>
+                <!-- END reviews__slider__item -->
+                <!-- reviews__slider__item -->
+                <div class="reviews__slider__item">
+                    <div class="reviews__slider__item__img" style="background-image: url(img/reviews.jpeg);"></div>
+                    <div class="reviews__slider__item__text">
+                        <div class="reviews__slider__item__peopledata">
+                            <div class="reviews__slider__item__peopledata__avatar" style="background-image: url(img/reviews.jpeg);"></div>
+                            <div class="reviews__slider__item__peopledata__text">
+                                <div class="reviews__slider__item__peopledata__name">Екатерина Герасимова</div>
+                                <div class="reviews__slider__item__peopledata__date">08.06.2019</div>
+                            </div>
+                        </div>
+                        <div class="reviews__slider__item__text__otziv">
+                            Отмечали 31 мая юбилей папе. Все очень понравилось. Зал большой и очень уютный. <br><br>
+                            Угощение все свежее и очень вкусное за это спасибо повару. И ещё нам преподнесли в подарок каждому приглашенному шашлычки  из куриной грудки, которые таяли во рту. <br><br> 
+                            Девочки официантки справлялись со своими обязанностями отлично. И отдельное спасибо администраторам Ильнур и Альберту. 
+                            Спасибо большое. Все было на высшем уровне.
+                        </div>
+                    </div>
+                </div>
+                <!-- END reviews__slider__item -->
+                <!-- reviews__slider__item -->
+                <div class="reviews__slider__item">
+                    <div class="reviews__slider__item__img" style="background-image: url(img/reviews.jpeg);"></div>
+                    <div class="reviews__slider__item__text">
+                        <div class="reviews__slider__item__peopledata">
+                            <div class="reviews__slider__item__peopledata__avatar" style="background-image: url(img/reviews.jpeg);"></div>
+                            <div class="reviews__slider__item__peopledata__text">
+                                <div class="reviews__slider__item__peopledata__name">Екатерина Герасимова</div>
+                                <div class="reviews__slider__item__peopledata__date">08.06.2019</div>
+                            </div>
+                        </div>
+                        <div class="reviews__slider__item__text__otziv">
+                            Отмечали 31 мая юбилей папе. Все очень понравилось. Зал большой и очень уютный. <br><br>
+                            Угощение все свежее и очень вкусное за это спасибо повару. И ещё нам преподнесли в подарок каждому приглашенному шашлычки  из куриной грудки, которые таяли во рту. <br><br> 
+                            Девочки официантки справлялись со своими обязанностями отлично. И отдельное спасибо администраторам Ильнур и Альберту. 
+                            Спасибо большое. Все было на высшем уровне.
+                        </div>
+                    </div>
+                </div>
+                <!-- END reviews__slider__item -->
+            </div>
+            <div class="reviews__slider__dots"></div>
+            <div class="reviews__slider__btn">
+                <a href="" class="btn">Читать все отзывы</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ===================== END reviews =================== -->
+<!-- ================================================== -->
+
+
+
+<!-- ================================================== -->
+<!-- ===================== faq =================== -->
+<!-- ================================================== -->
+<section class="faq sec white">
+    <div class="parallax">
+        <div class="parallax__scene" data-paralax-scene>
+            <img src="img/faq__parallax-1.png" alt="" class="parallax__img" data-depth="0.5">
+            <img src="img/faq__parallax-2.png" alt="" class="parallax__img" data-depth="1">
+        </div>
+    </div>
+    <div class="parallax">
+        <div class="parallax__scene" data-paralax-scene>
+            <img src="img/faq__parallax-3.png" alt="" class="parallax__img" data-depth="0.5">
+            <img src="img/faq__parallax-4.png" alt="" class="parallax__img" data-depth="1">
+        </div>
+    </div>
+    <div class="container">
+        <div class="faq__content">
+            <h2 class="sec__title center"><span class="gold">Ответы на</span> часто задаваемые <span class="gold">вопросы</span></h2>
+            <div class="faq__items">
+                <!-- faq__item -->
+                <div class="faq__item" >
+                    <div class="faq__item__head" data-accordion-link="1">
+                        <div class="faq__item__head__title">Как заказать?</div>
+                        <div class="faq__item__head__icon"></div>
+                    </div>
+                    <div class="faq__item__text" data-accordion-text="1">
+                        Мы отправляем ваш заказ, Почтой России а так же можем отправить курьерской доставкой.
+                    </div>
+                </div>
+                <!-- END faq__item -->
+                <!-- faq__item -->
+                <div class="faq__item" >
+                    <div class="faq__item__head" data-accordion-link="2">
+                        <div class="faq__item__head__title">Как получить товар?</div>
+                        <div class="faq__item__head__icon"></div>
+                    </div>
+                    <div class="faq__item__text" data-accordion-text="2">
+                        Мы отправляем ваш заказ, Почтой России а так же можем отправить курьерской доставкой.
+                    </div>
+                </div>
+                <!-- END faq__item -->
+                <!-- faq__item -->
+                <div class="faq__item" >
+                    <div class="faq__item__head" data-accordion-link="3">
+                        <div class="faq__item__head__title">Сколько держит зарядку от аккумулятора?</div>
+                        <div class="faq__item__head__icon"></div>
+                    </div>
+                    <div class="faq__item__text" data-accordion-text="3">
+                        Мы отправляем ваш заказ, Почтой России а так же можем отправить курьерской доставкой.
+                    </div>
+                </div>
+                <!-- END faq__item -->
+                <!-- faq__item -->
+                <div class="faq__item" >
+                    <div class="faq__item__head" data-accordion-link="4">
+                        <div class="faq__item__head__title">Есть ли гарантия?</div>
+                        <div class="faq__item__head__icon"></div>
+                    </div>
+                    <div class="faq__item__text" data-accordion-text="4">
+                        Мы отправляем ваш заказ, Почтой России а так же можем отправить курьерской доставкой.
+                    </div>
+                </div>
+                <!-- END faq__item -->
+                <!-- faq__item -->
+                <div class="faq__item" >
+                    <div class="faq__item__head" data-accordion-link="5">
+                        <div class="faq__item__head__title">Сколько держит зарядку от аккумулятора?</div>
+                        <div class="faq__item__head__icon"></div>
+                    </div>
+                    <div class="faq__item__text" data-accordion-text="5">
+                        Мы отправляем ваш заказ, Почтой России а так же можем отправить курьерской доставкой.
+                    </div>
+                </div>
+                <!-- END faq__item -->
+                <!-- faq__item -->
+                <div class="faq__item" >
+                    <div class="faq__item__head" data-accordion-link="6">
+                        <div class="faq__item__head__title">Есть ли гарантия?</div>
+                        <div class="faq__item__head__icon"></div>
+                    </div>
+                    <div class="faq__item__text" data-accordion-text="6">
+                        Мы отправляем ваш заказ, Почтой России а так же можем отправить курьерской доставкой.
+                    </div>
+                </div>
+                <!-- END faq__item -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ===================== END faq =================== -->
+<!-- ================================================== -->
+
+
+
+<!-- ================================================== -->
+<!-- ===================== howtoget =================== -->
+<!-- ================================================== -->
+<section class="howtoget sec goldbg cloud__top">
+    <div class="parallax">
+        <div class="parallax__scene" data-paralax-scene>
+            <img src="img/howtoget__parallax-1.png" alt="" class="parallax__img" data-depth="0.5">
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="sec__title center"><span class="gold">Как добраться</span> до нас</h2>
+        <div class="howtoget__content">
+            <div class="howtoget__map" id="howtoget__map"></div>
+            <div class="howtoget__text">
+                <div class="howtoget__text__opisanie">
+                    <p>Мы находимся в Приволжском районе по адресу: г. Казань ул. Карбышева, 70  эт. 2 </p>
+                    <p><span class="gold">На общественном транспорте:</span></p>
+                    <p><span class="gold">На автобусе:</span> №74 до остановки МКДЦ</p>
+                    <p><span class="gold">На автобусе:</span> №4, 5, 47, 68 до остановки Улица Комарова и пешком 6 минут до банкетного зала.</p>
+                    <p><span class="gold">На троллейбусе:</span> №8, 9, 12 до остановки Улица Комарова и пешком 6 минут до банкетного зала.</p>
+                </div>
+                <div class="btn">Построить маршрут</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ===================== END howtoget =================== -->
+<!-- ================================================== -->
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+<script type="text/javascript">
+    //Яндекс Карта
+        ymaps.ready(init);
+        var myMapAll;
+
+        function init() {
+            myMapAll = new ymaps.Map("howtoget__map", {
+                center: [55.809874, 37.602939],
+                zoom: 17,
+            });
+            var myPlacemark_1 = new ymaps.Placemark([55.809874, 37.602939], {
+                balloonContentHeader: "Название объекта",
+                balloonContentBody: "Описание объекта",
+                balloonContentFooter: "",
+                hintContent: "Кликните для более подробной информации",
+            });
+            myMapAll.geoObjects.add(myPlacemark_1);
+        }
+        //END Яндекс Карта
+</script>
+{% endblock %}

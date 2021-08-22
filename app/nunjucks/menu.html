@@ -1,0 +1,349 @@
+{% set title = 'Главная' %}
+
+{% extends 'layouts/_main.html' %}
+
+{% block content %}
+
+
+<!-- ================================================== -->
+<!-- ===================== hero ===================== -->
+<!-- ================================================== -->
+<section class="hero cloud__bottom-gold" style="background-image: url(img/menu.jpeg);">
+    <div class="hero__overlay solid"></div>
+    <div class="hero__overlay linear"></div>
+    <div class="hero__overlay radial"></div>
+    <div class="container">
+        <div class="hero__content">
+            <ul class="hero__bredcrumbs">
+                <li><a href="/">Главная</a></li>
+                <img class="hero__bredcrumbs__separator" src="img/bredcrumbs.svg" alt="">
+                <li>Меню банкетных залов Валенсия</li>
+            </ul>
+            <h1 class="hero__title">
+                Меню банкетных  <span class="hero__title__gold">залов Валенсия</span>
+            </h1>
+            <p class="hero__desc">Многим кажется, что проведение банкетов – это сложное и времязатратное дело. Спешим развеять миф! Заказав торжество у нас, вы поймете, что праздники – это не головная боль, а радость.</p>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ===================== END hero =================== -->
+<!-- ================================================== -->
+
+
+
+<!-- ================================================== -->
+<!-- ===================== catalog =================== -->
+<!-- ================================================== -->
+<section class="catalog sec goldbg">
+    <div class="container">
+        <div class="catalog__content">
+            <div class="catalog__content__left">
+                <div class="catalog__content__left__raschet">
+                    <div class="catalog__content__left__raschet__title">Итого: <span data-summ>510.000 ₽</span></div>
+                    <a href="" class="btn">Посмотреть расчёт</a>
+                </div>
+                <ul class="catalog__content__left__raschet__nav">
+                    <li class="catalog__content__left__raschet__nav__link active"><a href="">Салаты</a></li>
+                    <li class="catalog__content__left__raschet__nav__link"><a href="">Холодные закуски</a></li>
+                    <li class="catalog__content__left__raschet__nav__link"><a href="">Горячие закуски</a></li>
+                    <li class="catalog__content__left__raschet__nav__link"><a href="">Первые блюда</a></li>
+                    <li class="catalog__content__left__raschet__nav__link"><a href="">Основное блюдо</a></li>
+                    <li class="catalog__content__left__raschet__nav__link"><a href="">Гарниры</a></li>
+                    <li class="catalog__content__left__raschet__nav__link"><a href="">Десерты</a></li>
+                    <li class="catalog__content__left__raschet__nav__link"><a href="">Выпечка</a></li>
+                    <li class="catalog__content__left__raschet__nav__link"><a href="">Холодные напитки</a></li>
+                    <li class="catalog__content__left__raschet__nav__link"><a href="">Горячие напитки</a></li>
+                </ul>
+            </div>
+            <div class="catalog__content__right">
+                <div class="catalog__content__right__items">
+                    <!-- catalog__content__right__item -->
+                    <div class="catalog__content__right__item">
+                        <div class="catalog__content__right__item__img" style="background-image: url(img/product.jpeg)"></div>
+                        <div class="catalog__content__right__item__text">
+                            <div class="catalog__content__right__item__text__title">Салат Греческий</div>
+                            <div class="catalog__content__right__item__text__composition">
+                                <span class="catalog__content__right__item__text__composition__label">Состав блюда:</span> Свежие огурцы, помидоры, перец болгарский,  листья салата, маслины, сыр Фета, оливковое масло, сушеный базилик, зелень
+                            </div>
+                            <div class="catalog__content__right__item__text__footer">
+                                <div class="catalog__content__right__item__text__footer__price">12 275 ₽</div>
+                                <div class="catalog__content__right__item__text__footer__massa">Выход: 170 гр.</div>
+                                <div class="catalog__content__right__item__text__footer__count">
+                                    <div class="catalog__content__right__item__text__footer__count__label">Колл-во:</div>
+                                    <input type="number" value="1">
+                                </div>
+                                <button class="btn">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END catalog__content__right__item -->
+                    <!-- catalog__content__right__item -->
+                    <div class="catalog__content__right__item">
+                        <div class="catalog__content__right__item__img" style="background-image: url(img/product.jpeg)"></div>
+                        <div class="catalog__content__right__item__text">
+                            <div class="catalog__content__right__item__text__title">Салат Греческий</div>
+                            <div class="catalog__content__right__item__text__composition">
+                                Состав блюда: Свежие огурцы, помидоры, перец болгарский,  листья салата, маслины, сыр Фета, оливковое масло, сушеный базилик, зелень
+                            </div>
+                            <div class="catalog__content__right__item__text__footer">
+                                <div class="catalog__content__right__item__text__footer__price">275 ₽</div>
+                                <div class="catalog__content__right__item__text__footer__massa">Выход: 170 гр.</div>
+                                <div class="catalog__content__right__item__text__footer__count">
+                                    <div class="catalog__content__right__item__text__footer__count__label">Колличество:</div>
+                                    <input type="number" value="1">
+                                </div>
+                                <button class="btn">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END catalog__content__right__item -->
+                    <!-- catalog__content__right__item -->
+                    <div class="catalog__content__right__item">
+                        <div class="catalog__content__right__item__img" style="background-image: url(img/product.jpeg)"></div>
+                        <div class="catalog__content__right__item__text">
+                            <div class="catalog__content__right__item__text__title">Салат Греческий</div>
+                            <div class="catalog__content__right__item__text__composition">
+                                Состав блюда: Свежие огурцы, помидоры, перец болгарский,  листья салата, маслины, сыр Фета, оливковое масло, сушеный базилик, зелень
+                            </div>
+                            <div class="catalog__content__right__item__text__footer">
+                                <div class="catalog__content__right__item__text__footer__price">275 ₽</div>
+                                <div class="catalog__content__right__item__text__footer__massa">Выход: 170 гр.</div>
+                                <div class="catalog__content__right__item__text__footer__count">
+                                    <div class="catalog__content__right__item__text__footer__count__label">Колличество:</div>
+                                    <input type="number" value="1">
+                                </div>
+                                <button class="btn">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END catalog__content__right__item -->
+                    <!-- catalog__content__right__item -->
+                    <div class="catalog__content__right__item">
+                        <div class="catalog__content__right__item__img" style="background-image: url(img/product.jpeg)"></div>
+                        <div class="catalog__content__right__item__text">
+                            <div class="catalog__content__right__item__text__title">Салат Греческий</div>
+                            <div class="catalog__content__right__item__text__composition">
+                                Состав блюда: Свежие огурцы, помидоры, перец болгарский,  листья салата, маслины, сыр Фета, оливковое масло, сушеный базилик, зелень
+                            </div>
+                            <div class="catalog__content__right__item__text__footer">
+                                <div class="catalog__content__right__item__text__footer__price">275 ₽</div>
+                                <div class="catalog__content__right__item__text__footer__massa">Выход: 170 гр.</div>
+                                <div class="catalog__content__right__item__text__footer__count">
+                                    <div class="catalog__content__right__item__text__footer__count__label">Колличество:</div>
+                                    <input type="number" value="1">
+                                </div>
+                                <button class="btn">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END catalog__content__right__item -->
+                    <!-- catalog__content__right__item -->
+                    <div class="catalog__content__right__item">
+                        <div class="catalog__content__right__item__img" style="background-image: url(img/product.jpeg)"></div>
+                        <div class="catalog__content__right__item__text">
+                            <div class="catalog__content__right__item__text__title">Салат Греческий</div>
+                            <div class="catalog__content__right__item__text__composition">
+                                Состав блюда: Свежие огурцы, помидоры, перец болгарский,  листья салата, маслины, сыр Фета, оливковое масло, сушеный базилик, зелень
+                            </div>
+                            <div class="catalog__content__right__item__text__footer">
+                                <div class="catalog__content__right__item__text__footer__price">275 ₽</div>
+                                <div class="catalog__content__right__item__text__footer__massa">Выход: 170 гр.</div>
+                                <div class="catalog__content__right__item__text__footer__count">
+                                    <div class="catalog__content__right__item__text__footer__count__label">Колличество:</div>
+                                    <input type="number" value="1">
+                                </div>
+                                <button class="btn">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END catalog__content__right__item -->
+                    <!-- catalog__content__right__item -->
+                    <div class="catalog__content__right__item">
+                        <div class="catalog__content__right__item__img" style="background-image: url(img/product.jpeg)"></div>
+                        <div class="catalog__content__right__item__text">
+                            <div class="catalog__content__right__item__text__title">Салат Греческий</div>
+                            <div class="catalog__content__right__item__text__composition">
+                                Состав блюда: Свежие огурцы, помидоры, перец болгарский,  листья салата, маслины, сыр Фета, оливковое масло, сушеный базилик, зелень
+                            </div>
+                            <div class="catalog__content__right__item__text__footer">
+                                <div class="catalog__content__right__item__text__footer__price">275 ₽</div>
+                                <div class="catalog__content__right__item__text__footer__massa">Выход: 170 гр.</div>
+                                <div class="catalog__content__right__item__text__footer__count">
+                                    <div class="catalog__content__right__item__text__footer__count__label">Колличество:</div>
+                                    <input type="number" value="1">
+                                </div>
+                                <button class="btn">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END catalog__content__right__item -->
+                    <!-- catalog__content__right__item -->
+                    <div class="catalog__content__right__item">
+                        <div class="catalog__content__right__item__img" style="background-image: url(img/product.jpeg)"></div>
+                        <div class="catalog__content__right__item__text">
+                            <div class="catalog__content__right__item__text__title">Салат Греческий</div>
+                            <div class="catalog__content__right__item__text__composition">
+                                Состав блюда: Свежие огурцы, помидоры, перец болгарский,  листья салата, маслины, сыр Фета, оливковое масло, сушеный базилик, зелень
+                            </div>
+                            <div class="catalog__content__right__item__text__footer">
+                                <div class="catalog__content__right__item__text__footer__price">275 ₽</div>
+                                <div class="catalog__content__right__item__text__footer__massa">Выход: 170 гр.</div>
+                                <div class="catalog__content__right__item__text__footer__count">
+                                    <div class="catalog__content__right__item__text__footer__count__label">Колличество:</div>
+                                    <input type="number" value="1">
+                                </div>
+                                <button class="btn">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END catalog__content__right__item -->
+                    <!-- catalog__content__right__item -->
+                    <div class="catalog__content__right__item">
+                        <div class="catalog__content__right__item__img" style="background-image: url(img/product.jpeg)"></div>
+                        <div class="catalog__content__right__item__text">
+                            <div class="catalog__content__right__item__text__title">Салат Греческий</div>
+                            <div class="catalog__content__right__item__text__composition">
+                                Состав блюда: Свежие огурцы, помидоры, перец болгарский,  листья салата, маслины, сыр Фета, оливковое масло, сушеный базилик, зелень
+                            </div>
+                            <div class="catalog__content__right__item__text__footer">
+                                <div class="catalog__content__right__item__text__footer__price">275 ₽</div>
+                                <div class="catalog__content__right__item__text__footer__massa">Выход: 170 гр.</div>
+                                <div class="catalog__content__right__item__text__footer__count">
+                                    <div class="catalog__content__right__item__text__footer__count__label">Колличество:</div>
+                                    <input type="number" value="1">
+                                </div>
+                                <button class="btn">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END catalog__content__right__item -->
+                    <!-- catalog__content__right__item -->
+                    <div class="catalog__content__right__item">
+                        <div class="catalog__content__right__item__img" style="background-image: url(img/product.jpeg)"></div>
+                        <div class="catalog__content__right__item__text">
+                            <div class="catalog__content__right__item__text__title">Салат Греческий</div>
+                            <div class="catalog__content__right__item__text__composition">
+                                Состав блюда: Свежие огурцы, помидоры, перец болгарский,  листья салата, маслины, сыр Фета, оливковое масло, сушеный базилик, зелень
+                            </div>
+                            <div class="catalog__content__right__item__text__footer">
+                                <div class="catalog__content__right__item__text__footer__price">275 ₽</div>
+                                <div class="catalog__content__right__item__text__footer__massa">Выход: 170 гр.</div>
+                                <div class="catalog__content__right__item__text__footer__count">
+                                    <div class="catalog__content__right__item__text__footer__count__label">Колличество:</div>
+                                    <input type="number" value="1">
+                                </div>
+                                <button class="btn">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END catalog__content__right__item -->
+                    <!-- catalog__content__right__item -->
+                    <div class="catalog__content__right__item">
+                        <div class="catalog__content__right__item__img" style="background-image: url(img/product.jpeg)"></div>
+                        <div class="catalog__content__right__item__text">
+                            <div class="catalog__content__right__item__text__title">Салат Греческий</div>
+                            <div class="catalog__content__right__item__text__composition">
+                                Состав блюда: Свежие огурцы, помидоры, перец болгарский,  листья салата, маслины, сыр Фета, оливковое масло, сушеный базилик, зелень
+                            </div>
+                            <div class="catalog__content__right__item__text__footer">
+                                <div class="catalog__content__right__item__text__footer__price">275 ₽</div>
+                                <div class="catalog__content__right__item__text__footer__massa">Выход: 170 гр.</div>
+                                <div class="catalog__content__right__item__text__footer__count">
+                                    <div class="catalog__content__right__item__text__footer__count__label">Колличество:</div>
+                                    <input type="number" value="1">
+                                </div>
+                                <button class="btn">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END catalog__content__right__item -->
+                    <!-- catalog__content__right__item -->
+                    <div class="catalog__content__right__item">
+                        <div class="catalog__content__right__item__img" style="background-image: url(img/product.jpeg)"></div>
+                        <div class="catalog__content__right__item__text">
+                            <div class="catalog__content__right__item__text__title">Салат Греческий</div>
+                            <div class="catalog__content__right__item__text__composition">
+                                Состав блюда: Свежие огурцы, помидоры, перец болгарский,  листья салата, маслины, сыр Фета, оливковое масло, сушеный базилик, зелень
+                            </div>
+                            <div class="catalog__content__right__item__text__footer">
+                                <div class="catalog__content__right__item__text__footer__price">275 ₽</div>
+                                <div class="catalog__content__right__item__text__footer__massa">Выход: 170 гр.</div>
+                                <div class="catalog__content__right__item__text__footer__count">
+                                    <div class="catalog__content__right__item__text__footer__count__label">Колличество:</div>
+                                    <input type="number" value="1">
+                                </div>
+                                <button class="btn">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END catalog__content__right__item -->
+                    <!-- catalog__content__right__item -->
+                    <div class="catalog__content__right__item">
+                        <div class="catalog__content__right__item__img" style="background-image: url(img/product.jpeg)"></div>
+                        <div class="catalog__content__right__item__text">
+                            <div class="catalog__content__right__item__text__title">Салат Греческий</div>
+                            <div class="catalog__content__right__item__text__composition">
+                                Состав блюда: Свежие огурцы, помидоры, перец болгарский,  листья салата, маслины, сыр Фета, оливковое масло, сушеный базилик, зелень
+                            </div>
+                            <div class="catalog__content__right__item__text__footer">
+                                <div class="catalog__content__right__item__text__footer__price">275 ₽</div>
+                                <div class="catalog__content__right__item__text__footer__massa">Выход: 170 гр.</div>
+                                <div class="catalog__content__right__item__text__footer__count">
+                                    <div class="catalog__content__right__item__text__footer__count__label">Колличество:</div>
+                                    <input type="number" value="1">
+                                </div>
+                                <button class="btn">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END catalog__content__right__item -->
+                </div>
+                <!-- <div class="catalog__content__right__loadmore">
+                    <div class="btn">Показать еще</div>
+                </div> -->
+                <div class="catalog__content__right__pagination__wrapper">
+                    <div class="catalog__content__right__pagination">
+                        <a href="" class="catalog__content__right__pagination__leftarrow">
+                            <img src="img/pagination-left.svg" alt="">
+                        </a>
+                        <div class="catalog__content__right__pagination__numbers">
+                            <a href="" class="catalog__content__right__pagination__number">1</a>
+                            <a href="" class="catalog__content__right__pagination__number">2</a>
+                            <a href="" class="catalog__content__right__pagination__number active">3</a>
+                            <a href="" class="catalog__content__right__pagination__number">4</a>
+                            <a href="" class="catalog__content__right__pagination__number">5</a>
+                            <a href="" class="catalog__content__right__pagination__number">6</a>
+                            <a href="" class="catalog__content__right__pagination__number">7</a>
+                        </div>
+                        <a href="" class="catalog__content__right__pagination__rightarrow">
+                            <img src="img/pagination-right.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ===================== END catalog =================== -->
+<!-- ================================================== -->
+
+
+<!-- ================================================== -->
+<!-- ===================== END catalog =================== -->
+<!-- ================================================== -->
+<section class="catalog__panel">
+    <div class="container">
+        <div class="catalog__panel__content">
+            <a href="" class="btn">Посмотреть расчет</a>
+            <div class="catalog__panel__content__price">Итого: 510.000 ₽</div>
+            
+        </div>
+    </div>
+</section>
+<!-- ================================================== -->
+<!-- ===================== END catalog =================== -->
+<!-- ================================================== -->
+
+{% endblock %}

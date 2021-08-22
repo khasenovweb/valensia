@@ -1,0 +1,89 @@
+@import "_vars.less";
+
+.managers {
+}
+.managers__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3rem;
+    padding: 0 10rem;
+    margin-top: 10rem;
+    margin-bottom: -3rem;
+}
+
+.managers__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(12rem);
+        top: 0;
+        width: 720rem;
+        height: 42.3rem;
+        background-repeat: repeat-x;
+        background-position: center;
+        background-size: contain;
+        background-image: url(../img/managers__cloud.png);
+    }
+}
+.managers__item__img {
+    width: 23rem;
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+}
+
+.managers__item__name {
+    margin-top: 1rem;
+    font-family: "Noto Serif", serif;
+    font-style: normal;
+    font-size: 2.4rem;
+    position: relative;
+    z-index: 1;
+    color: @black;
+    text-align: center;
+}
+
+.managers__item__role {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: @gold;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+// ============================================================ //
+// ========================== MEDIA ========================== //
+// ============================================================ //
+@media screen and (max-width: 1100px) {
+    .managers__items {
+        padding: 0;
+    }
+}
+@media screen and (max-width: 700px) {
+    .managers__items {
+        grid-template-columns: 1fr;
+        margin-top: 4rem;
+        grid-gap: 6rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .managers__item__name {
+        font-size: 1.8rem;
+    }
+    .managers__item__role {
+        font-size: 1.2rem;
+    }
+}
+// ============================================================ //
+// ========================== END MEDIA ======================= //
+// ============================================================ //

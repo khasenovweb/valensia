@@ -1,0 +1,124 @@
+.events {
+  position: relative;
+  .parallax:nth-child(1) {
+    right: 0;
+    top: 0;
+    width: 70.4rem;
+    transform: translateX(45%);
+  }
+  .parallax:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 50.8rem;
+    transform: translateX(-5%) translateY(40%);
+    z-index: 1;
+  }
+}
+.events__content {
+  position: relative;
+  z-index: 2;
+}
+.events__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2.5rem;
+  margin-top: 5rem;
+}
+
+.events__item {
+  width: 100%;
+  padding-bottom: 88%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem;
+  overflow: hidden;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+.events__item__title__wrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 2rem;
+  width: 100%;
+}
+.events__item__title {
+  padding: 1.5rem 2rem;
+  background: radial-gradient(
+      47.41% 82.95% at 51.46% -4.55%,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.4) 0.01%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    #b38d4f;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  font-family: Noto Serif, serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: white;
+}
+
+// ============================================================ //
+// ========================== MEDIA ========================== //
+// ============================================================ //
+
+@media screen and (max-width: 1100px) {
+  .events__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .events {
+    .parallax:nth-child(1) {
+      transform: translateX(45%) translateY(40%);
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .events__items {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  .events {
+    position: relative;
+    .parallax:nth-child(1) {
+      right: 0;
+      top: 0;
+      width: 35.4rem;
+      transform: translateX(45%) translateY(100%);
+    }
+    .parallax:nth-child(2) {
+      left: 0;
+      bottom: 0;
+      width: 25.8rem;
+      transform: translateX(-5%) translateY(40%);
+      z-index: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .events__item__title {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  .events__item__title__wrapper {
+    padding: 1rem;
+  }
+}
+
+// ============================================================ //
+// ========================== END MEDIA ======================= //
+// ============================================================ //

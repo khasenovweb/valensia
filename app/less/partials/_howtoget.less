@@ -1,0 +1,69 @@
+@import "_vars.less";
+.howtoget {
+    .parallax:nth-child(1) {
+        right: 0;
+        top: 0;
+        transform: translateY(40%) translateX(30%);
+        width: 20rem;
+    }
+}
+.howtoget__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4.5rem;
+    margin-top: 4rem;
+}
+
+.howtoget__text__items {
+    display: grid;
+}
+.howtoget__text__item {
+}
+.howtoget__text {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 2rem 0;
+    .gold {
+        color: @gold;
+    }
+    .btn {
+        margin-top: 3rem;
+    }
+}
+.howtoget__text__opisanie {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(max-content, 0));
+    grid-gap: 1rem;
+}
+
+.howtoget__map {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+// ============================================================ //
+// ========================== MEDIA ======================= //
+// ============================================================ //
+@media screen and (max-width: 700px) {
+    .howtoget__content {
+        grid-template-columns: 1fr;
+        grid-gap: 3rem;
+    }
+    .howtoget__map {
+        height: 20rem;
+    }
+    .howtoget__text {
+        padding: 0;
+    }
+    .howtoget {
+        .parallax:nth-child(1) {
+            transform: translateY(70%) translateX(30%);
+            width: 10rem;
+        }
+    }
+}
+// ============================================================ //
+// ========================== END MEDIA ======================= //
+// ============================================================ //

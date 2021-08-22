@@ -1,0 +1,119 @@
+.interior {
+    .parallax:nth-child(1) {
+        right: 0;
+        top: 0;
+        transform: translateX(2rem);
+        width: 31.7rem;
+        z-index: 3;
+    }
+    .parallax:nth-child(2) {
+        right: 0;
+        bottom: 0;
+        transform: translate(30rem, 25rem);
+        width: 58.7rem;
+        z-index: 1;
+    }
+}
+
+.interior__content {
+    position: relative;
+    .parallax:nth-child(1) {
+        left: 0;
+        top: 0;
+        width: 19rem;
+        transform: translate(-12rem, -16rem);
+        z-index: 3;
+    }
+}
+.interior__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.interior__item {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    &:hover {
+        .interior__item__img {
+            transform: scale(1.1);
+        }
+        .interior__item__overlay {
+            opacity: 1;
+        }
+        .interior__item__zoom {
+            transform: translateY(0);
+        }
+    }
+}
+
+.interior__item__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s;
+    transform: scale(1.01);
+}
+
+.interior__item__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    background: linear-gradient(
+        0deg,
+        rgba(214, 175, 109, 0.6),
+        rgba(214, 175, 109, 0.6)
+    );
+    opacity: 0;
+}
+
+.interior__item__zoom {
+    transform: translateY(1rem);
+    transition: 0.3s;
+}
+
+// ============================================================ //
+// ========================== MEDIA ========================== //
+// ============================================================ //
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 700px) {
+    .interior {
+        padding-bottom: 0;
+    }
+    .interior .parallax:nth-child(1) {
+        width: 11rem;
+        transform: translateX(1.5rem);
+    }
+    .interior__content .parallax:nth-child(1) {
+        width: 10rem;
+        transform: translate(-5rem, -8rem);
+    }
+    .interior__items {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+}
+// ============================================================ //
+// ========================== END MEDIA ======================= //
+// ============================================================ //

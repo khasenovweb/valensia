@@ -1,0 +1,58 @@
+@import "_vars.less";
+
+.peculiarities__items {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 3rem;
+}
+
+.peculiarities__item {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.peculiarities__item__icon {
+    width: 100%;
+    padding-bottom: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.peculiarities__item__title {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 700;
+    color: @black;
+}
+
+// ============================================================ //
+// ========================== MEDIA ========================== //
+// ============================================================ //
+@media screen and (max-width: 1200px) {
+    .peculiarities__items {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .peculiarities__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .peculiarities__items {
+        grid-gap: 1rem;
+        margin-top: 3rem;
+    }
+}
+// ============================================================ //
+// ========================== END MEDIA ======================= //
+// ============================================================ //

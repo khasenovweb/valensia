@@ -1,0 +1,110 @@
+@import "_vars.less";
+
+.banketmenusec {
+    position: relative;
+    .parallax:nth-child(1) {
+        right: 0;
+        top: 0;
+        transform: translateX(20%);
+        width: 15.4rem;
+    }
+    .parallax:nth-child(2) {
+        left: 0;
+        bottom: 0;
+        transform: translateX(-15%);
+        width: 16.3rem;
+    }
+    .parallax:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        transform: translateX(25%);
+        width: 25.3rem;
+    }
+}
+.banketmenusec__content {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    grid-gap: 3rem;
+    margin-top: 5rem;
+    position: relative;
+    align-items: center;
+}
+
+.banketmenusec__text__opisanie {
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.banketmenusec__text__price {
+    font-size: 2.2rem;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    .gold {
+        color: @gold;
+    }
+}
+
+.banketmenusec__text__btn {
+    margin-top: 3rem;
+    .btn {
+        font-size: 1.4rem;
+        padding: 2rem 3rem;
+    }
+}
+
+.banketmenusec__img {
+    img {
+        width: 100%;
+    }
+}
+
+// ============================================================ //
+// ========================== MEDIA ========================== //
+// ============================================================ //
+
+@media screen and (max-width: 900px) {
+    .banketmenusec__content {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .banketmenusec {
+        .parallax:nth-child(1) {
+            transform: translateX(20%);
+            width: 7.4rem;
+        }
+        .parallax:nth-child(2) {
+            transform: translateX(-15%) translateY(105%);
+            width: 8.3rem;
+            bottom: initial;
+            top: 0;
+        }
+        .parallax:nth-child(3) {
+            transform: translateX(25%);
+            width: 12.3rem;
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .banketmenusec__text__btn {
+        .btn {
+            width: 100%;
+        }
+    }
+    .banketmenusec__text__price {
+        font-size: 1.4rem;
+    }
+    .banketmenusec__text__opisanie {
+        font-size: 1.3rem;
+    }
+}
+
+// ============================================================ //
+// ========================== END MEDIA ======================= //
+// ============================================================ //

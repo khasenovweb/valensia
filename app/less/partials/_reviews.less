@@ -1,0 +1,179 @@
+@import "_vars.less";
+
+.reviews {
+    .parallax:nth-child(1) {
+        right: 0;
+        top: 0;
+        width: 70.4rem;
+        transform: translateX(45%);
+    }
+    .parallax:nth-child(2) {
+        left: 0;
+        bottom: 0;
+        width: 50.8rem;
+        transform: translateX(-5%) translateY(0%);
+        z-index: 1;
+    }
+}
+.reviews__content {
+    position: relative;
+    z-index: 2;
+}
+.reviews__slider {
+    max-width: 84.4rem;
+    margin: 0 auto;
+    margin-top: 6rem;
+}
+.reviews__slider__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.reviews__slider__item__img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.reviews__slider__item__text {
+    padding: 4rem;
+}
+.reviews__slider__item__peopledata {
+    display: flex;
+    align-items: center;
+}
+.reviews__slider__item__peopledata__avatar {
+    width: 6rem;
+    min-width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 2.4rem;
+}
+
+.reviews__slider__item__peopledata__name {
+    font-family: "Noto Serif", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: @black;
+}
+.reviews__slider__item__peopledata__date {
+    font-family: "Noto Serif", serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: @black;
+    margin-top: 0.5rem;
+}
+
+.reviews__slider__item__text__otziv {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.reviews__slider__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5.6rem;
+    width: 100%;
+    button.owl-dot {
+        width: 0.8rem;
+        min-width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 100%;
+        background-color: #c4c4c4;
+        margin: 0.5rem;
+        border: none;
+        cursor: pointer;
+        &.active {
+            width: 1.2rem;
+            min-width: 1.2rem;
+            height: 1.2rem;
+
+            background: radial-gradient(
+                    47.41% 82.95% at 51.46% -4.55%,
+                    rgba(255, 255, 255, 0.4) 0%,
+                    rgba(255, 255, 255, 0.4) 0.01%,
+                    rgba(255, 255, 255, 0) 100%
+                ),
+                #39b100;
+        }
+    }
+}
+
+.reviews__slider__btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3rem;
+    .btn {
+        padding: 2rem 3rem;
+        font-size: 1.4rem;
+    }
+}
+
+// ============================================================ //
+// ========================== MEDIA ========================== //
+// ============================================================ //
+
+@media screen and (max-width: 700px) {
+    .reviews {
+        position: relative;
+        .parallax:nth-child(1) {
+            right: 0;
+            top: 0;
+            width: 35.4rem;
+            transform: translateX(45%) translateY(60%);
+        }
+        .parallax:nth-child(2) {
+            left: 0;
+            bottom: 0;
+            width: 25.8rem;
+            transform: translateX(-5%) translateY(-30%);
+        }
+    }
+    .reviews__slider__item {
+        grid-template-columns: 1fr;
+    }
+    .reviews__slider__item__img {
+        height: 30rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .reviews__slider__item__text {
+        padding: 1.5rem;
+    }
+    .reviews__slider__item__peopledata__avatar {
+        width: 5rem;
+        min-width: 5rem;
+        height: 5rem;
+    }
+    .reviews__slider__item__peopledata__name {
+        font-size: 1.4rem;
+    }
+    .reviews__slider__item__peopledata__date {
+        font-size: 1.2rem;
+    }
+    .reviews__slider__item__text__otziv {
+        font-size: 1.2rem;
+    }
+    .reviews__slider__dots {
+        margin-top: 3rem;
+    }
+    .reviews__slider {
+        margin-top: 3rem;
+    }
+    .reviews__slider__item__peopledata__avatar {
+        margin-right: 1.5rem;
+    }
+}
+// ============================================================ //
+// ========================== END MEDIA ======================= //
+// ============================================================ //

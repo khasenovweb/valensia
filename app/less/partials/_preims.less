@@ -1,0 +1,115 @@
+.preims {
+    background-color: #f6f6f6;
+    position: relative;
+    z-index: 0;
+    .parallax {
+        width: 31.7rem;
+        right: 0;
+        top: 0;
+        transform: translateX(2%);
+    }
+}
+.preims__content {
+    position: relative;
+    z-index: 2;
+}
+.preims__items {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1rem;
+    margin-top: 5.4rem;
+}
+.preims__item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.preims__item__icon {
+    width: 100%;
+    padding-bottom: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.preims__item__title {
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.preims__panel {
+    padding: 3rem 4rem;
+    background: radial-gradient(
+            47.41% 82.95% at 51.46% -4.55%,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 0.4) 0.01%,
+            rgba(255, 255, 255, 0) 100%
+        ),
+        #39b100;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 96.5rem;
+    margin: 0 auto;
+    margin-bottom: 7.8rem;
+    margin-top: -20rem;
+    .btn {
+        font-size: 1.6rem;
+    }
+}
+
+.preims__panel__title {
+    font-weight: bold;
+    font-size: 2.8rem;
+    color: white;
+}
+.preims__panel__desc {
+    font-size: 1.6rem;
+    color: white;
+}
+// ============================================================ //
+// ========================== MEDIA ========================== //
+// ============================================================ //
+
+@media screen and (max-width: 1100px) {
+    .preims__items {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .preims {
+        .parallax {
+            width: 11rem;
+        }
+    }
+    .preims__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .preims__panel {
+        margin-top: -12rem;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        margin-bottom: 4rem;
+        .btn {
+            width: 100%;
+            font-size: 1.2rem;
+        }
+    }
+    .preims__panel__title {
+        font-size: 2rem;
+    }
+    .preims__panel__desc {
+        font-size: 1.2rem;
+    }
+    .preims__panel__text {
+        margin-bottom: 1rem;
+    }
+}
+
+// ============================================================ //
+// ========================== END MEDIA ======================= //
+// ============================================================ //

@@ -1,158 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-
-
-@import "_vars.less";
-
-* {
-	margin: 0;
-	padding: 0;
-	font-family: 'Open Sans';
-	box-sizing: border-box;
-	list-style-type: none;
-	outline: none;
-}
-
-html {
-	font-size: 10px;
-}
-
-a {
-	text-decoration: none;
-	color: @gold;
-}
-input[type="text"] {
-	padding: 2rem 2.5rem;
-	border: none;
-	border-radius: 1rem;
-	background-color: #F5F5F5;
-	font-weight: 500;
-	font-size: 1.4rem;
-	color: @black;
-	&::placeholder {
-		color: #C4C4C4;
-	}
-}
-.global__wrapper {
-	overflow-x: hidden;
-}
-.container {
-	max-width: 131rem;
-	padding: 0 3rem;
-	margin: 0 auto;
-}
-
-.btn {
-	color: white;
-	background: radial-gradient(47.41% 82.95% at 51.46% -4.55%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 0.01%, rgba(255, 255, 255, 0) 100%), #39B100;
-	box-shadow: 0 2px 0 0 #39A904;
-	border-radius: 10px;
-	border: 0;
-	padding: 1.4rem 2rem;
-	cursor: pointer;
-	position: relative;
-	overflow: hidden;
-	font-weight: 600;
-	font-weight: 1.3rem;
-	&:before {
-		content: '';
-		display: block;
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-		height: 0.2rem;
-		background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 10%, #55c62100 100%);
-	}
-	&:active {
-		box-shadow: none;
-		transform: translateY(.2rem);
-	}
-}
-
-.checkbox {
-	cursor: pointer;
-	input {
-		display: none;
-		&:checked + .checkbox__box {
-			.checkbox__box__circle {
-				transform: translateX(1rem);
-				background-color: @green;
-			}
-		}
-	}
-}
-.checkbox__box {
-	width: 2.2rem;
-	height: 1.2rem;
-	background: #F5F5F5;
-	border-radius: 10rem;
-	padding: 0.2rem;
-}
-
-.checkbox__box__circle {
-	width: 0.8rem;
-	min-width: 0.8rem;
-	height: 0.8rem;
-	background: #C4C4C4;
-	border-radius: 100%;
-	transition: 0.3s;
-}
-label.error {
-	// margin-top: 1rem;
-	font-size: 1rem;
-	display: block;
-	color: #D0141E;
-	padding: 1rem 2.5rem;
-	// background-color: #F5F5F5;
-	border-radius: 1rem;
-	display: none !important;
-}
-input.error {
-	background-color: lighten(#D0141E, 52%);
-}
-.sec__title {
-	font-family: Noto Serif;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 4rem;
-	color: @black;
-}
-
-.cloud {
-	width: 720rem;
-	height: 42.3rem;
-	background-position: center;
-	background-image: url(../img/cloud.png);
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	
-	// top: 0;
-}
-// ============================================================ //
-// ========================== MEDIA ========================== //
-// ============================================================ //
-@media screen and (max-width: 900px) {
-    html {
-		font-size: 8px;
-	}
-}
-
-@media screen and (max-width: 700px) {
-    html {
-		font-size: 10px;
-	}
-	.container {
-		padding: 0 2rem;
-	}
-}
-
-// ============================================================ //
-// ========================== END MEDIA ======================= //
 // ============================================================ //
 
-@import "_header.less";
-@import "_navbar.less";
-@import "_hero.less";
-@import "_aboutus.less";
+@import "partials/_header.less";
+@import "partials/_catalog.less";
+@import "partials/_navbar.less";
+@import "partials/_hero.less";
+@import "partials/_aboutus.less";
+@import "partials/_preims.less";
+@import "partials/_events.less";
+@import "partials/_threezals.less";
+@import "partials/_banketmenusec.less";
+@import "partials/_managers.less";
+@import "partials/_clients.less";
+@import "partials/_reviews.less";
+@import "partials/_faq.less";
+@import "partials/_footer.less";
+@import "partials/_interior.less";
+@import "partials/_peculiarities.less";
+@import "partials/_3dtour.less";
+@import "partials/_stock.less";
+@import "partials/_personalmanager.less";
+@import "partials/_howtoget.less";
+@import "partials/_steps.less";
+
+@import "libs/datepicker.min.css";
+@import "libs/jquery.fancybox.min.css";
+@import "libs/owl.carousel.min.css";

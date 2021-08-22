@@ -1,0 +1,195 @@
+@import "_vars.less";
+
+.threezals {
+    position: relative;
+    .parallax:nth-child(1) {
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 51.8rem;
+        transform: translateX(35%) translateY(15%);
+    }
+    .parallax:nth-child(2) {
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 49.2rem;
+        transform: translateX(-35%) translateY(20%);
+    }
+}
+
+.threezals__content {
+    position: relative;
+    z-index: 2;
+}
+
+.threezals__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    margin-top: 6.8rem;
+}
+
+.threezals__item {
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+.threezals__item__img {
+    width: 100%;
+    padding-bottom: 73%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+.threezals__item__text {
+    padding: 2.5rem;
+}
+
+.threezals__item__title {
+    font-family: "Noto Serif", serif;
+    font-weight: 500;
+    font-size: 2.2rem;
+    color: @black;
+}
+
+.threezals__item__options {
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(max-content, 0));
+    grid-gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.threezals__item__option {
+    display: flex;
+    align-items: center;
+}
+
+.threezals__item__option__icon {
+    width: 1.6rem;
+    min-width: 1.6rem;
+    height: 1.6rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-right: 1.5rem;
+}
+.threezals__item__option__title {
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: @black;
+}
+.threezals__item__options__btn {
+    margin-top: 2rem;
+}
+
+.threezals__tags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5.5rem;
+}
+
+.threezals__tags__label {
+    font-weight: normal;
+    font-size: 1.8rem;
+    color: @black;
+}
+
+.threezals__tags__items {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.threezals__tags__item {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    color: @black;
+    font-family: "Noto Serif", serif;
+    &:hover {
+        color: white;
+        background: radial-gradient(
+                47.41% 82.95% at 51.46% -4.55%,
+                rgba(255, 255, 255, 0.4) 0%,
+                rgba(255, 255, 255, 0.4) 0.01%,
+                rgba(255, 255, 255, 0) 100%
+            ),
+            #39b100;
+        box-shadow: 0 2px 0 0 #39a904;
+        cursor: pointer;
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 0.2rem;
+            background: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.2) 10%,
+                #55c62100 100%
+            );
+        }
+        &:active {
+            box-shadow: none;
+            transform: translateY(0.2rem);
+        }
+    }
+}
+
+// ============================================================ //
+// ========================== MEDIA ========================== //
+// ============================================================ //
+
+@media screen and (max-width: 1000px) {
+    .threezals__items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .threezals__items {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 3rem;
+    }
+    .threezals .parallax:nth-child(1) {
+        width: 25.8rem;
+        transform: translateX(35%) translateY(50%);
+    }
+    .threezals .parallax:nth-child(2) {
+        width: 25rem;
+        transform: translateX(-65%) translateY(-22%);
+    }
+    .threezals__tags {
+        flex-direction: column;
+    }
+    .threezals__tags__items {
+        margin: 2rem 0;
+    }
+    .threezals__tags {
+        margin-top: 4rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .threezals__item__title {
+        font-size: 1.6rem;
+    }
+    .threezals__item__option__title {
+        font-size: 1.2rem;
+    }
+}
+
+// ============================================================ //
+// ========================== END MEDIA ======================= //
+// ============================================================ //
