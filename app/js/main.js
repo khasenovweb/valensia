@@ -1,4 +1,5 @@
 @@include('libs/jquery.js')
+
 @@include('libs/datepicker.min.js')
 @@include('libs/datepicker.ru-RU.js')
 @@include('libs/jquery.fancybox.min.js')
@@ -7,7 +8,8 @@
 @@include('libs/owl.carousel.min.js')
 @@include('libs/parallax.min.js')
 @@include('libs/validate.js')
-@@include('libs/jquery.stickybits.min.js')
+
+@@include('partials/modal.js')
 
 $(document).ready(function(){
     $.fn.datepicker.languages['ru-RU'] = {
@@ -30,7 +32,6 @@ $(document).ready(function(){
     });
 
 
-    // $('[data-mask="phone"]').mask("+7 (999) 999-99-99");
     $('[data-mask="date"]').mask("99.99.9999");
 
 
@@ -53,6 +54,77 @@ $(document).ready(function(){
         $('[data-accordion-text="'+id+'"]').slideToggle();
     });
 
-    // $('.catalog__content__left').stickybits();
-});
+    // Изменнение кол-ва в input
+    $('body').on('click', '[data-input-number-group-plus]', function(){
+        var val = $(this).closest('[data-input-number-group]').find('[data-input-number-group-input]').val();
+        var newval = Number(val) + 1;
+        $(this).closest('[data-input-number-group]').find('[data-input-number-group-input]').val(newval);
+        $(this).closest('[data-input-number-group]').find('[data-input-number-group-input]').trigger('change');
+    });
+    $('body').on('click', '[data-input-number-group-minus]',function(){
+        var val = $(this).closest('[data-input-number-group]').find('[data-input-number-group-input]').val();
+        var newval;
+        if( val > 1 ) {
+            newval = Number(val) - 1;
+        }else {
+            newval = 1;
+        }
+        $(this).closest('[data-input-number-group]').find('[data-input-number-group-input]').val(newval);
+        $(this).closest('[data-input-number-group]').find('[data-input-number-group-input]').trigger('change');;
+    });
+    // END Изменнение кол-ва в input
 
+
+    $('[data-mobile-menu-show]').click(function(){
+        $('[data-mobile-nav]').addClass('active');
+        $('.global__wrapper').addClass('hidden-y');
+    });
+    $('[data-mobile-menu-hide]').click(function(){
+        $('[data-mobile-nav]').removeClass('active');
+        $('.global__wrapper').removeClass('hidden-y');
+    });
+
+
+    $('.reviews__slider__dots').each(function() {
+      $(this).find('.owl-dot').each(function(index) {
+        $(this).attr('aria-label', index + 1);
+      });
+    });
+
+    
+    $('img[data-lazy-src]').each(function(i, el){
+        var src = $(el).attr('data-lazy-src');
+        $(this).attr('src',src);
+    });
+
+
+    // $(window).scroll(function(){
+    //     $('.global__wrapper').append('<link rel="stylesheet" href="css/main.css">');
+    // });
+
+    $.validator.addMethod(
+        "phone",
+        function (value) {
+            return value.replace(/\D+/g, "").length >= 11;
+        },
+        "Введите номер телефона полностью"
+    );
+
+    $("form[data-form-validate]").each(function (i, el) {
+        $(el).validate({
+            rules: {
+                phone: "phone",
+                date: "required",
+                politics: "required"
+            },
+            messages: {
+                date: "Выберите дату"
+            },
+            submitHandler: function(form) {
+                var data = $(form).serialize();
+                console.log('Валидно');
+            }
+        });
+    });
+
+});

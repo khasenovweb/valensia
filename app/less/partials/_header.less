@@ -93,7 +93,17 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        background-image: url(../img/hamburger.svg);
+        background-image: url(/static/img/hamburger.svg);
+    }
+
+    &:hover {
+        background: radial-gradient(
+                47.41% 82.95% at 51.46% -4.55%,
+                rgba(255, 255, 255, 0.4) 0%,
+                rgba(255, 255, 255, 0.4) 0.01%,
+                rgba(255, 255, 255, 0) 100%
+            ),
+            #308c05;
     }
 }
 

@@ -1,9 +1,37 @@
-// ============================================================ //
+// =============== Libs ===================== //
+@import "libs/datepicker.min.css";
+@import "libs/jquery.fancybox.min.css";
+@import "libs/owl.carousel.min.css";
+// =============== END Libs ===================== //
+.hidden-y {
+    overflow-y: hidden;
+}
+.datepicker-top-left:before,
+.datepicker-top-right:before {
+    border-bottom-color: @green;
+}
 
-@import "partials/_header.less";
+.datepicker-panel > ul > li.picked,
+.datepicker-panel > ul > li.picked:hover {
+    color: @green;
+}
+
+.datepicker-panel > ul > li.highlighted {
+    background-color: lighten(@green, 60%);
+}
+.datepicker-panel > ul > li {
+    &:hover {
+        background-color: lighten(@green, 60%);
+    }
+}
+.datepicker-top-left,
+.datepicker-top-right {
+    border-top-color: @green;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+// =============== Partials ===================== //
 @import "partials/_catalog.less";
-@import "partials/_navbar.less";
-@import "partials/_hero.less";
 @import "partials/_aboutus.less";
 @import "partials/_preims.less";
 @import "partials/_events.less";
@@ -21,7 +49,46 @@
 @import "partials/_personalmanager.less";
 @import "partials/_howtoget.less";
 @import "partials/_steps.less";
+@import "partials/_menu__detail.less";
+@import "partials/_modal.less";
+@import "partials/_modal__custom.less";
+@import "partials/_mobile__nav.less";
+@import "partials/_order__print.less";
 
-@import "libs/datepicker.min.css";
-@import "libs/jquery.fancybox.min.css";
-@import "libs/owl.carousel.min.css";
+// =============== END Partials ===================== //
+
+@keyframes loader {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+    10% {
+        transform: translate(-50%, -50%) rotate(180deg) scale(1.02);
+    }
+    20% {
+        transform: translate(-50%, -50%) rotate(360deg) scale(1.04);
+    }
+    30% {
+        transform: translate(-50%, -50%) rotate(540deg) scale(1.06);
+    }
+    40% {
+        transform: translate(-50%, -50%) rotate(720deg) scale(1.08);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(900deg) scale(1.1);
+    }
+    60% {
+        transform: translate(-50%, -50%) rotate(1080deg) scale(1.08);
+    }
+    70% {
+        transform: translate(-50%, -50%) rotate(1260deg) scale(1.06);
+    }
+    80% {
+        transform: translate(-50%, -50%) rotate(1440deg) scale(1.04);
+    }
+    90% {
+        transform: translate(-50%, -50%) rotate(1620deg) scale(1.02);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(1800deg) scale(1);
+    }
+}

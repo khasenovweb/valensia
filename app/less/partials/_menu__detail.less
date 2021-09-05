@@ -1,0 +1,252 @@
+.menu__detail {
+    position: relative;
+}
+.menu__detail__content {
+    background-color: #fff;
+    border-radius: 1rem;
+    margin-top: -20rem;
+    position: relative;
+    &.load {
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 2rem;
+            z-index: 1;
+        }
+        &:after {
+            content: "";
+            width: 4rem;
+            height: 4rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 100%;
+            border: 2px solid #dcdcdc;
+            z-index: 2;
+            border-top-color: @green;
+            animation: loader 3s linear infinite;
+        }
+    }
+}
+
+.menu__detail__content__header {
+    display: grid;
+    grid-template-columns: 9rem 1fr 18rem 13rem 10rem 4rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.menu__detail__content__col {
+    padding: 2rem 0;
+    font-size: 1.6rem;
+}
+
+.menu__detail__content__col__title {
+    color: @black;
+    font-weight: 600;
+    &.center {
+        text-align: center;
+    }
+    &.gold {
+        color: @gold;
+    }
+}
+
+.menu__detail__content__item__img {
+    width: 4.2rem;
+    min-width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.menu__detail__content__items {
+}
+.menu__detail__content__item {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: @black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    display: grid;
+    grid-template-columns: 9rem 7rem 1fr 18rem 13rem 10rem 4rem;
+
+    position: relative;
+}
+.menu__detail__content__item__number {
+    text-align: center;
+    width: 100%;
+    color: @gold;
+}
+.menu__detail__content__item__name {
+    font-weight: 600;
+}
+.menu__detail__content__price {
+    font-weight: 600;
+}
+.menu__detail__content__summ {
+    font-weight: 600;
+}
+
+.menu__detail__content__item__remove {
+    background-color: #fff;
+    width: 4rem;
+    min-width: 4rem;
+    height: 4rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    &:hover {
+        background-color: #f1f1f1;
+    }
+}
+
+.menu__detail__content__footer {
+    // padding: 3rem;
+    // display: grid;
+    // grid-template-columns: 3fr 3fr 2fr 2fr;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+}
+.menu__detail__content__footer__col {
+    padding: 1.5rem;
+}
+.menu__detail__content__footer__col__label {
+    font-size: 14px;
+    color: #7a7a7a;
+}
+
+.menu__detail__content__footer__col__value {
+    font-weight: bold;
+    font-size: 24px;
+    color: @black;
+    margin-top: 0.2rem;
+}
+
+.menu__detail__content__footer__col__btn {
+    display: flex;
+    justify-content: flex-end;
+}
+.menu__detail__content__price_label {
+    font-size: 1rem;
+    font-weight: 300;
+    display: none;
+}
+.menu__detail__content__summ__label {
+    font-size: 1rem;
+    font-weight: 300;
+    display: none;
+}
+// ============================================================ //
+// ========================== MEDIA ========================== //
+// ============================================================ //
+@media screen and (max-width: 700px) {
+    .menu__detail__content__price_label {
+        display: block;
+    }
+    .menu__detail__content__summ__label {
+        display: block;
+    }
+    .menu__detail__content__header {
+        display: none;
+    }
+    .menu__detail__content {
+        margin-top: -13rem;
+    }
+    .menu__detail__content__item__col:nth-child(1) {
+        display: none;
+    }
+    .menu__detail__content__item__col:nth-child(2) {
+        grid-area: img;
+        align-self: start;
+    }
+    .menu__detail__content__item__col:nth-child(3) {
+        grid-area: name;
+    }
+    .menu__detail__content__item__col:nth-child(4) {
+        grid-area: count;
+    }
+    .menu__detail__content__item__col:nth-child(5) {
+        grid-area: price;
+    }
+    .menu__detail__content__item__col:nth-child(6) {
+        grid-area: summ;
+    }
+
+    .menu__detail__content__item {
+        grid-template-columns: 4.2rem auto auto;
+        grid-gap: 1rem;
+        grid-column-gap: 1.5rem;
+        grid-template-areas:
+            "img name name"
+            "img price summ"
+            "img count count";
+    }
+    .menu__detail__content__item {
+        padding: 1.5rem;
+        padding-right: 5.5rem;
+    }
+    .menu__detail__content__item__remove {
+        top: 1.5rem;
+        transform: none;
+    }
+    .menu__detail__content__footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(0, max-content);
+        grid-gap: 1rem;
+    }
+    .menu__detail__content__footer__col {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+    }
+    .menu__detail__content__footer__col__value {
+        padding-left: 2rem;
+        min-width: max-content;
+    }
+    .menu__detail__content__footer__col__btn {
+        width: 100%;
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu__detail__content__item__img {
+        width: 3rem;
+        min-width: 3rem;
+        height: 3rem;
+    }
+    .menu__detail__content__item {
+        grid-template-columns: 3rem auto auto;
+    }
+    .menu__detail__content__footer__col__value {
+        font-size: 1.6rem;
+    }
+    .menu__detail__content__footer__col__label {
+        font-size: 1rem;
+    }
+}
+// ============================================================ //
+// ========================== END MEDIA ========================== //
+// ============================================================ //

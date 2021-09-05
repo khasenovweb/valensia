@@ -40,7 +40,7 @@ function nunjucks_compile(){
 
 function js_compile() {
     return gulp
-        .src("app/js/main.js")
+        .src("app/js/*.js")
         .pipe(fileinclude())
         .pipe(uglify())
         .pipe(gulp.dest("dist/js"))

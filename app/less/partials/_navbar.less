@@ -2,7 +2,7 @@
 
 .navbar {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .navbar__content {
@@ -19,6 +19,43 @@
         font-size: 1.4rem;
         color: @black;
         display: inline-block;
+        display: flex;
+        align-items: center;
+        &:hover {
+            color: @green;
+        }
+        img {
+            margin-left: 1rem;
+        }
+    }
+}
+.navbar__link {
+    position: relative;
+    &:hover {
+        .navbar__links__submenu {
+            visibility: visible;
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+.navbar__links__submenu {
+    position: absolute;
+    left: 4rem;
+    top: 5rem;
+    background-color: #fff;
+    width: max-content;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    transform: translateY(1rem);
+    opacity: 0;
+    transition: 0.3s;
+    a {
+        padding: 0.7rem 2rem;
+        &:hover {
+            color: @gold;
+        }
     }
 }
 

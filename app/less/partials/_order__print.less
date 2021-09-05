@@ -1,0 +1,66 @@
+@import "_vars.less";
+
+.order__print {
+    padding: 4rem 8rem;
+    .menu__detail__content {
+        margin-top: 4rem;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+}
+
+.order__print__contacts {
+    margin-top: 5rem;
+}
+.order__print__contacts__title {
+    font-weight: 600;
+    font-size: 18px;
+    color: #d6af6d;
+}
+.order__print__contacts__phones {
+    display: grid;
+    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(max-content, 5rem));
+    grid-gap: 3rem;
+}
+.order__print__contacts__phone {
+    display: block;
+}
+
+.order__print__contacts__phone {
+    color: #383838;
+    font-size: 22px;
+    font-weight: bold;
+}
+.order__print__contacts__loc__icon {
+    width: 2.4rem;
+    min-width: 2.4rem;
+    height: 2.4rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.order__print__contacts__locs {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+}
+.order__print__contacts__loc {
+    display: flex;
+    align-items: center;
+    margin-right: 4rem;
+}
+.order__print__contacts__loc__icon {
+    margin-right: 1rem;
+}
+.order__print__contacts__loc__title {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.order__print__text {
+    margin-top: 4rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: @black;
+    line-height: 150%;
+}
